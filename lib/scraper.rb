@@ -30,9 +30,9 @@ class Scraper
       name = p.name
       type = p.type
       sql = <<-SQL
-        INSERT INTO pokemon(name, type, hp) VALUES(?, ?, ?);
+        INSERT INTO pokemon(name, type) VALUES(?, ?);
       SQL
-      db.execute(sql, name, type, p.hp)
+      db.execute(sql, name, type)
     end
   end
 end

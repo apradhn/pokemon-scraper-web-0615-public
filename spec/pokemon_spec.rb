@@ -11,7 +11,7 @@ describe "Pokemon" do
 
   describe "has caught all 151 from scraping" do
     it "has all 151 pokemon" do
-      expect(@db.execute("SELECT * FROM pokemon ORDER BY id DESC").flatten.first).to eq(151)
+      expect(@db.execute("SELECT id, name, type FROM pokemon ORDER BY id DESC").flatten.first).to eq(151)
     end
 
     it "knows all the information about Horsea" do

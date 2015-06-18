@@ -18,9 +18,11 @@ class Pokemon
 
   def self.find(id, db)
     @@db = db
+
     sql = <<-SQL
       SELECT name, type FROM pokemon WHERE id = ?
     SQL
+
     data = db.execute(sql, id).flatten
     Pokemon.new.tap do |p|
       p.name = data[0]

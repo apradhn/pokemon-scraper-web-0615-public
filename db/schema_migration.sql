@@ -3,5 +3,4 @@
 CREATE TABLE pokemon(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
-  type TEXT,
-  hp INTEGER);
+  type TEXT);
